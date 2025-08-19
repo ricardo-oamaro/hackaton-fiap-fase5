@@ -2,7 +2,7 @@ package br.com.fiap.hackaton.service;
 
 import br.com.fiap.hackaton.record.RankedSlot;
 import br.com.fiap.hackaton.dto.SuggestionRequestDto;
-import br.com.fiap.hackaton.dto.SuggestionResponseDto;
+import br.com.fiap.hackaton.dto.SugestaoResponseDto;
 import br.com.fiap.hackaton.enums.ConsultaStatus;
 import br.com.fiap.hackaton.enums.Especialidade;
 import br.com.fiap.hackaton.exceptions.NoSuggestionException;
@@ -36,7 +36,7 @@ public class SugestaoService {
     private long holdMinutes;
 
     @Transactional
-    public SuggestionResponseDto sugerir(SuggestionRequestDto req) {
+    public SugestaoResponseDto sugerir(SuggestionRequestDto req) {
         var paciente = pacienteRepository.findById(req.getPacienteId())
                 .orElseThrow(() -> new EntityNotFoundException("Paciente não encontrado"));
         if (!paciente.isAtivo()) {
@@ -95,7 +95,7 @@ public class SugestaoService {
         var ubs = melhor.getUbs();
         var prof = melhor.getProfissional();
 
-        return SuggestionResponseDto.builder()
+        return SugestaoResponseDto.builder()
                 .consultaId(proposta.getId())
                 .ubsId(ubs.getId())
                 .ubsNome(ubs.getNome())

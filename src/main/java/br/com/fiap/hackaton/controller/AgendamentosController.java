@@ -1,10 +1,9 @@
 package br.com.fiap.hackaton.controller;
 
-import br.com.fiap.hackaton.dto.ApiErrorResponse;
-import br.com.fiap.hackaton.dto.SuggestionRequestDto;
-import br.com.fiap.hackaton.dto.SuggestionResponseDto;
+import br.com.fiap.hackaton.dto.*;
 import br.com.fiap.hackaton.exceptions.NoSuggestionException;
 import br.com.fiap.hackaton.service.SugestaoService;
+import br.com.fiap.hackaton.service.SugestoesService;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -22,11 +21,17 @@ import java.time.OffsetDateTime;
 public class AgendamentosController {
 
     private final SugestaoService sugestaoService;
+    private final SugestoesService sugestoesService;
 
     @PostMapping("/sugestao")
-    public ResponseEntity<SuggestionResponseDto> sugerir(@Valid @RequestBody SuggestionRequestDto req) {
+    public ResponseEntity<SugestaoResponseDto> sugerir(@Valid @RequestBody SuggestionRequestDto req) {
         var resp = sugestaoService.sugerir(req);
         return ResponseEntity.ok(resp);
+    }
+
+    @PostMapping("/sugestoes")
+    public SugestoesResponseDto listarSugestoes(@Valid @RequestBody SugestoesRequestDto req) {
+        return sugestoesService.listar(req);
     }
 
     // === Error handlers padronizados ===
