@@ -1,7 +1,7 @@
 package br.com.fiap.hackaton.service;
 
 import br.com.fiap.hackaton.record.RankedSlot;
-import br.com.fiap.hackaton.dto.SuggestionRequestDto;
+import br.com.fiap.hackaton.dto.SugestaoRequestDto;
 import br.com.fiap.hackaton.dto.SugestaoResponseDto;
 import br.com.fiap.hackaton.enums.ConsultaStatus;
 import br.com.fiap.hackaton.enums.Especialidade;
@@ -36,7 +36,7 @@ public class SugestaoService {
     private long holdMinutes;
 
     @Transactional
-    public SugestaoResponseDto sugerir(SuggestionRequestDto req) {
+    public SugestaoResponseDto sugerir(SugestaoRequestDto req) {
         var paciente = pacienteRepository.findById(req.getPacienteId())
                 .orElseThrow(() -> new EntityNotFoundException("Paciente não encontrado"));
         if (!paciente.isAtivo()) {

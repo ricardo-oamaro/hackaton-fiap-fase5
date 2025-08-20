@@ -2,6 +2,7 @@ package br.com.fiap.hackaton.controller;
 
 import br.com.fiap.hackaton.dto.*;
 import br.com.fiap.hackaton.exceptions.NoSuggestionException;
+import br.com.fiap.hackaton.service.AgendamentoService;
 import br.com.fiap.hackaton.service.SugestaoService;
 import br.com.fiap.hackaton.service.SugestoesService;
 import jakarta.persistence.EntityNotFoundException;
@@ -22,9 +23,10 @@ public class AgendamentosController {
 
     private final SugestaoService sugestaoService;
     private final SugestoesService sugestoesService;
+    private final AgendamentoService agendamentoService;
 
     @PostMapping("/sugestao")
-    public ResponseEntity<SugestaoResponseDto> sugerir(@Valid @RequestBody SuggestionRequestDto req) {
+    public ResponseEntity<SugestaoResponseDto> sugerir(@Valid @RequestBody SugestaoRequestDto req) {
         var resp = sugestaoService.sugerir(req);
         return ResponseEntity.ok(resp);
     }
@@ -32,6 +34,12 @@ public class AgendamentosController {
     @PostMapping("/sugestoes")
     public SugestoesResponseDto listarSugestoes(@Valid @RequestBody SugestoesRequestDto req) {
         return sugestoesService.listar(req);
+    }
+
+    @PostMapping("/{id}/confirmar")
+    public ResponseEntity<AgendamentoResponseDto> confirmar(@PathVariable Long id) {
+        var dto = agendamentoService.confirmar(id);
+        return ResponseEntity.ok(dto);
     }
 
     // === Error handlers padronizados ===

@@ -18,4 +18,11 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
                                  @Param("fim") OffsetDateTime fim);
 
     Optional<Consulta> findByIdAndStatus(Long id, ConsultaStatus status);
+
+    @Query("""
+      select c.slot.id from Consulta c
+      where c.status = 'AGENDADA'
+         or (c.status = 'PROPOSTA' and c.expiresAt > CURRENT_TIMESTAMP)
+    """)
+    List<Long> findSlotsOcupados();
 }
