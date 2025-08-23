@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "b1ac310e-d392-4e73-88b8-bfbfbfa6be94",
+		"name": "FASE 5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16814452",
+		"_collection_link": "https://api555-6503.postman.co/workspace/FIAP~ca19283b-5465-4867-8200-96f36e770fa4/collection/16814452-b1ac310e-d392-4e73-88b8-bfbfbfa6be94?action=share&source=collection_link&creator=16814452"
+	},
+	"item": [
+		{
+			"name": "Historia2",
+			"item": [
+				{
+					"name": "Criar Tipo de Exame (Hemograma)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"codigo\": \"HEMOGRAMA3\",\n    \"descricao\": \"Hemograma Completo2\",\n    \"urgentePorPadrao\": false,\n    \"duracaoMinutos\": 30,\n    \"observacoes\": \"Exame de sangue básico\",\n    \"palavrasChaveAlta\": \"pré-operatório,cirurgia,urgente,emergência\",\n    \"palavrasChaveMedia\": \"acompanhamento,controle,rotina médica\",\n    \"prazoDiasAlta\": 3,\n    \"prazoDiasMedia\": 7,\n    \"prazoDiasBaixa\": 15\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipos-exame",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipos-exame"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agendar Exame - Caso Urgente (Prioridade Alta)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pacienteId\": 2,\n    \"tipoExame\": \"HEMOGRAMA\",\n    \"observacoes\": \"Exame pré-operatório para cirurgia cardíaca\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333,\n    \"raioKm\": 15,\n    \"urgente\": true,\n    \"justificativaUrgencia\": \"Cirurgia marcada para próxima semana\"\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exames/agendar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exames",
+								"agendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agendar Exame - Caso Normal (Prioridade Baixa)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pacienteId\": 1,\n    \"tipoExame\": \"HEMOGRAMA\",\n    \"observacoes\": \"Exame de rotina para check-up anual\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333,\n    \"raioKm\": 10,\n    \"urgente\": false\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exames/agendar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exames",
+								"agendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Tipos de Exame Ativos",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/tipos-exame",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipos-exame"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Tipo de Exame Urgente (Ultrassom)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"codigo\": \"ULTRASSOM2\",\n    \"descricao\": \"Ultrassom Abdominal\",\n    \"urgentePorPadrao\": true,\n    \"duracaoMinutos\": 45,\n    \"observacoes\": \"Ultrassonografia abdominal\",\n    \"palavrasChaveAlta\": \"dor abdominal,suspeita,urgente\",\n    \"palavrasChaveMedia\": \"acompanhamento,controle\",\n    \"prazoDiasAlta\": 1,\n    \"prazoDiasMedia\": 3,\n    \"prazoDiasBaixa\": 7\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/tipos-exame",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"tipos-exame"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agendar Exame - Prioridade Média por Palavra-Chave",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pacienteId\": 3,\n    \"tipoExame\": \"HEMOGRAMA\",\n    \"observacoes\": \"Exame de acompanhamento para controle de anemia\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333,\n    \"raioKm\": 20,\n    \"urgente\": false\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exames/agendar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exames",
+								"agendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agendar Raio-X com Alta Prioridade",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"pacienteId\": 3,\r\n    \"tipoExame\": \"RAIO_X\",\r\n    \"observacoes\": \"Suspeita de fratura após queda\",\r\n    \"latitude\": -23.5505,\r\n    \"longitude\": -46.6333,\r\n    \"raioKm\": 25,\r\n    \"justificativaUrgencia\": \"porque sim\",\r\n    \"urgente\": true\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exames/agendar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exames",
+								"agendar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Exames Disponíveis",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pacienteId\": 1,\n    \"tipoExame\": \"HEMOGRAMA\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333,\n    \"raioKm\": 15,\n    \"quantidadeMaxima\": 5,\n    \"janelaDias\": 15\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exames/disponiveis",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exames",
+								"disponiveis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirmar Exame Agendado",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/exames/5/confirmar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exames",
+								"5",
+								"confirmar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
