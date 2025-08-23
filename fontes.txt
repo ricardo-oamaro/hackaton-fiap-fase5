@@ -1,0 +1,1653 @@
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\pom.xml 
+======================================== 
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.5.4</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>br.com.fiap</groupId>
+	<artifactId>hackaton</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Hackaton Fiap Fase 5</name>
+	<description>Hackaton Fiap Fase 5</description>
+	<url/>
+	<licenses>
+		<license/>
+	</licenses>
+	<developers>
+		<developer/>
+	</developers>
+	<scm>
+		<connection/>
+		<developerConnection/>
+		<tag/>
+		<url/>
+	</scm>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+    </dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project> 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\hooks\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\info\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\logs\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\logs\refs\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\logs\refs\heads\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\logs\refs\remotes\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\logs\refs\remotes\origin\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\objects\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\objects\info\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\objects\pack\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\refs\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\refs\heads\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\refs\remotes\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\refs\remotes\origin\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.git\refs\tags\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.idea\compiler.xml 
+======================================== 
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hackaton" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hackaton" options="-parameters" />
+    </option>
+  </component>
+</project> 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.idea\encodings.xml 
+======================================== 
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+  </component>
+</project> 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.idea\jarRepositories.xml 
+======================================== 
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+  </component>
+</project> 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.idea\misc.xml 
+======================================== 
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="21" project-jdk-type="JavaSDK" />
+</project> 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.idea\vcs.xml 
+======================================== 
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+  </component>
+</project> 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.idea\workspace.xml 
+======================================== 
+ 
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a8fe3ac-90a3-421f-b3c1-41ab592f8df8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="31hCThGlR49gkYTdyhiQX4bd7OH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Vinicius/Documents/ESTUDO/organizado/posgraduacao/fiap_arquiteturajava/FASE 5/trabalho final/hackaton-fiap-fase5",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.25410.129" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-IU-251.25410.129" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a8fe3ac-90a3-421f-b3c1-41ab592f8df8" name="Changes" comment="" />
+      <created>1755966926771</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1755966926771</updated>
+      <workItem from="1755966927960" duration="388000" />
+      <workItem from="1755967338062" duration="428000" />
+      <workItem from="1755967841212" duration="729000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project> 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\.idea\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\HackatonFiapFase5Application.java 
+======================================== 
+ 
+package br.com.fiap.hackaton;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HackatonFiapFase5Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HackatonFiapFase5Application.class, args);
+	}
+
+} 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\controller\AgendamentosController.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.controller;
+
+import br.com.fiap.hackaton.dto.*;
+import br.com.fiap.hackaton.exceptions.NoSuggestionException;
+import br.com.fiap.hackaton.service.AgendamentoService;
+import br.com.fiap.hackaton.service.SugestaoService;
+import br.com.fiap.hackaton.service.SugestoesService;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.ErrorResponse;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.OffsetDateTime;
+
+@RestController
+@RequestMapping("/agendamentos")
+@RequiredArgsConstructor
+public class AgendamentosController {
+
+    private final SugestaoService sugestaoService;
+    private final SugestoesService sugestoesService;
+    private final AgendamentoService agendamentoService;
+
+    @PostMapping("/sugestao")
+    public ResponseEntity<SugestaoResponseDto> sugerir(@Valid @RequestBody SugestaoRequestDto req) {
+        var resp = sugestaoService.sugerir(req);
+        return ResponseEntity.ok(resp);
+    }
+
+    @PostMapping("/sugestoes")
+    public SugestoesResponseDto listarSugestoes(@Valid @RequestBody SugestoesRequestDto req) {
+        return sugestoesService.listar(req);
+    }
+
+    @PostMapping("/{id}/confirmar")
+    public ResponseEntity<AgendamentoResponseDto> confirmar(@PathVariable Long id) {
+        var dto = agendamentoService.confirmar(id);
+        return ResponseEntity.ok(dto);
+    }
+
+    // === Error handlers padronizados ===
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> handleValidation(MethodArgumentNotValidException ex) {
+        var msg = ex.getBindingResult().getFieldErrors().stream()
+                .map(fe -> fe.getField() + ": " + fe.getDefaultMessage())
+                .findFirst().orElse("Payload inválido");
+        return ResponseEntity.badRequest().body(err("BAD_REQUEST", msg));
+    }
+
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleNotFound(EntityNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(err("NOT_FOUND", ex.getMessage()));
+    }
+
+    @ExceptionHandler(IllegalStateException.class)
+    public ResponseEntity<ErrorResponse> handleIllegalState(IllegalStateException ex) {
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(err("FORBIDDEN", ex.getMessage()));
+    }
+
+    @ExceptionHandler(NoSuggestionException.class)
+    public ResponseEntity<ErrorResponse> handleNoSuggestion(NoSuggestionException ex) {
+        return ResponseEntity.unprocessableEntity().body(err("NO_SUGGESTION", ex.getMessage()));
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ErrorResponse> handleIllegalArg(IllegalArgumentException ex) {
+        return ResponseEntity.badRequest().body(err("BAD_REQUEST", ex.getMessage()));
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleGeneric(Exception ex) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(err("INTERNAL_ERROR", "Erro inesperado"));
+    }
+
+    private ErrorResponse err(String error, String message) {
+        var body = ApiErrorResponse.builder()
+                .timestamp(OffsetDateTime.now())
+                .status(0)
+                .error(error)
+                .message(message)
+                .path("/agendamentos/sugestao")
+                .build();
+        return ErrorResponse.create(body, HttpStatus.INTERNAL_SERVER_ERROR, null);
+    }
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\controller\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\AgendamentoResponseDto.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.dto;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.OffsetDateTime;
+
+@Data
+@Builder
+public class AgendamentoResponseDto {
+
+    private Long consultaId;
+    private String status;
+
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm", timezone = "America/Sao_Paulo")
+    private OffsetDateTime inicio;
+
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm", timezone = "America/Sao_Paulo")
+    private OffsetDateTime fim;
+
+    private String ubsNome;
+    private String profissionalNome;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\ApiErrorResponse.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.dto;
+
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.OffsetDateTime;
+
+@Data
+@Builder
+public class ApiErrorResponse extends Throwable {
+    private OffsetDateTime timestamp;
+    private int status;
+    private String error;
+    private String message;
+    private String path;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\ErrorResponseDto.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.dto;
+
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.OffsetDateTime;
+
+@Data
+@Builder
+public class ErrorResponseDto {
+
+    private String code;
+    private String message;
+    private OffsetDateTime timestamp;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestaoRequestDto.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.dto;
+
+import jakarta.validation.constraints.*;
+import lombok.Data;
+
+@Data
+public class SugestaoRequestDto {
+    @NotNull
+    private Long pacienteId;
+
+    @NotBlank
+    private String tipoConsulta; // "clinico_geral" no MVP
+
+    @NotBlank
+    private String sintomas;
+
+    @NotNull
+    @DecimalMin("-90.0") @DecimalMax("90.0")
+    private Double latitude;
+
+    @NotNull
+    @DecimalMin("-180.0") @DecimalMax("180.0")
+    private Double longitude;
+
+    // raio opcional em km
+    @Positive
+    private Double raioKm;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestaoResponseDto.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.dto;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.OffsetDateTime;
+
+@Data
+@Builder
+public class SugestaoResponseDto {
+    private Long consultaId; // id da proposta criada
+
+    private Long ubsId;
+    private String ubsNome;
+
+    private Long profissionalId;
+    private String profissionalNome;
+
+    private String especialidade;
+
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss", timezone = "America/Sao_Paulo")
+    private OffsetDateTime inicio;
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss", timezone = "America/Sao_Paulo")
+    private OffsetDateTime fim;
+
+    private Double distanciaKm;
+
+    private String prioridade;
+
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss", timezone = "America/Sao_Paulo")
+    private OffsetDateTime expiresAt;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestoesItemDto.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.dto;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.OffsetDateTime;
+
+@Data
+@Builder
+public class SugestoesItemDto {
+    private Long slotId;
+    private Long ubsId;
+    private String ubsNome;
+    private Long profissionalId;
+    private String profissionalNome;
+    private String especialidade;
+
+    @JsonFormat(pattern = "dd/MM/yyyy", timezone = "America/Sao_Paulo")
+    private OffsetDateTime inicio;
+
+    @JsonFormat(pattern = "dd/MM/yyyy", timezone = "America/Sao_Paulo")
+    private OffsetDateTime fim;
+
+    private Double distanciaKm;
+    private String prioridade;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestoesRequestDto.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.dto;
+
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+
+@Data
+public class SugestoesRequestDto {
+    @NotNull
+    private Long pacienteId;
+    @NotBlank
+    private String tipoConsulta;
+    @NotBlank private String sintomas;
+    @NotNull private Double latitude;
+    @NotNull private Double longitude;
+    private Double raioKm;
+    private int qtd = 3;
+    private boolean diasUnicos = true;
+    private int janelaDias = 10;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestoesResponseDto.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.dto;
+
+import lombok.Builder;
+import lombok.Data;
+
+import java.util.List;
+
+@Data
+@Builder
+public class SugestoesResponseDto {
+    private List<SugestoesItemDto> opcoes;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\enums\ConsultaStatus.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.enums;
+
+public enum ConsultaStatus {
+    PROPOSTA,
+    AGENDADA,
+    RECUSADA,
+    EXPIRADA,
+    CANCELADA
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\enums\Especialidade.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.enums;
+
+public enum Especialidade {
+    CLINICO_GERAL,
+    PEDIATRIA,
+    CARDIOLOGIA
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\enums\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\exceptions\NoSuggestionException.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.exceptions;
+
+public class NoSuggestionException extends RuntimeException {
+    public NoSuggestionException(String msg) { super(msg); }
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\exceptions\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\model\Consulta.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.model;
+
+import br.com.fiap.hackaton.enums.ConsultaStatus;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.OffsetDateTime;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Table(indexes = {
+        @Index(name = "idx_consulta_paciente_inicio", columnList = "paciente_id,inicio"),
+        @Index(name = "idx_consulta_status", columnList = "status")
+})
+public class Consulta {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne(optional = false)
+    private Paciente paciente;
+
+    @ManyToOne(optional = false)
+    private Profissional profissional;
+
+    @ManyToOne(optional = false)
+    private UBS ubs;
+
+    @ManyToOne(optional = false)
+    private SlotAgenda slot;
+
+    private OffsetDateTime inicio;
+    private OffsetDateTime fim;
+
+    @Enumerated(EnumType.STRING)
+    private ConsultaStatus status;
+
+    private OffsetDateTime expiresAt; // TTL da proposta
+
+    private String sintomas;
+
+    private String prioridade; // Alta/Media/Baixa (string simples no MVP)
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\model\Paciente.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Paciente {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+
+    private boolean ativo;
+
+    // endereço simplificado
+    private Double latitude;
+    private Double longitude;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\model\Profissional.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.model;
+
+import br.com.fiap.hackaton.enums.Especialidade;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Profissional {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+
+    @Enumerated(EnumType.STRING)
+    private Especialidade especialidade;
+
+    @ManyToOne(optional = false)
+    private UBS ubs;
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\model\SlotAgenda.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.model;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.OffsetDateTime;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Table(indexes = {
+        @Index(name = "idx_slot_profissional_inicio", columnList = "profissional_id,inicio"),
+        @Index(name = "idx_slot_ubs_inicio", columnList = "ubs_id,inicio")
+})
+public class SlotAgenda {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne(optional = false)
+    private Profissional profissional;
+
+    @ManyToOne(optional = false)
+    private UBS ubs;
+
+    private OffsetDateTime inicio;
+    private OffsetDateTime fim;
+
+    // tipo de atendimento simplificado (igual à especialidade principal do profissional no MVP)
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\model\UBS.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.model;
+
+import br.com.fiap.hackaton.enums.Especialidade;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Set;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class UBS {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String nome;
+
+    private Double latitude;
+    private Double longitude;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @Enumerated(EnumType.STRING)
+    private Set<Especialidade> especialidades;
+} 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\model\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\record\RankedSlot.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.record;
+
+import br.com.fiap.hackaton.model.SlotAgenda;
+
+public record RankedSlot(SlotAgenda slot, double distanciaKm) {
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\record\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\repository\ConsultaRepository.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.repository;
+
+import br.com.fiap.hackaton.enums.ConsultaStatus;
+import br.com.fiap.hackaton.model.Consulta;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.Optional;
+
+public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
+    @Query("SELECT c FROM Consulta c WHERE c.paciente.id = :pacienteId AND c.status = 'AGENDADA' "+
+            "AND ((:inicio BETWEEN c.inicio AND c.fim) OR (:fim BETWEEN c.inicio AND c.fim) OR (c.inicio BETWEEN :inicio AND :fim))")
+    List<Consulta> findConflitos(@Param("pacienteId") Long pacienteId,
+                                 @Param("inicio") OffsetDateTime inicio,
+                                 @Param("fim") OffsetDateTime fim);
+
+    Optional<Consulta> findByIdAndStatus(Long id, ConsultaStatus status);
+
+    @Query("""
+      select c.slot.id from Consulta c
+      where c.status = 'AGENDADA'
+         or (c.status = 'PROPOSTA' and c.expiresAt > CURRENT_TIMESTAMP)
+    """)
+    List<Long> findSlotsOcupados();
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\repository\PacienteRepository.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.repository;
+
+import br.com.fiap.hackaton.model.Paciente;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PacienteRepository extends JpaRepository<Paciente, Long> {
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\repository\ProfissionalRepository.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.repository;
+
+import br.com.fiap.hackaton.enums.Especialidade;
+import br.com.fiap.hackaton.model.Profissional;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface ProfissionalRepository extends JpaRepository<Profissional, Long> {
+
+    List<Profissional> findByEspecialidade(Especialidade especialidade);
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\repository\SlotAgendaRepository.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.repository;
+
+import br.com.fiap.hackaton.enums.Especialidade;
+import br.com.fiap.hackaton.model.SlotAgenda;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.time.OffsetDateTime;
+import java.util.List;
+
+public interface SlotAgendaRepository extends JpaRepository<SlotAgenda, Long> {
+    @Query("SELECT s FROM SlotAgenda s WHERE s.profissional.especialidade = :esp AND s.inicio >= :inicio")
+    List<SlotAgenda> findDisponiveisByEspecialidade(@Param("esp") Especialidade esp,
+                                                    @Param("inicio") OffsetDateTime inicio);
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\repository\UBSRepository.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.repository;
+
+import br.com.fiap.hackaton.model.UBS;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface UBSRepository extends JpaRepository<UBS, Long> {
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\repository\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\service\AgendamentoService.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.service;
+
+import br.com.fiap.hackaton.dto.AgendamentoResponseDto;
+import br.com.fiap.hackaton.enums.ConsultaStatus;
+import br.com.fiap.hackaton.repository.ConsultaRepository;
+import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.time.OffsetDateTime;
+
+@Service
+@RequiredArgsConstructor
+public class AgendamentoService {
+
+    private final ConsultaRepository consultaRepository;
+
+    @Transactional
+    public AgendamentoResponseDto confirmar(Long consultaId) {
+        var consulta = consultaRepository.findById(consultaId)
+                .orElseThrow(() -> new EntityNotFoundException("Consulta não encontrada"));
+
+        if (consulta.getStatus() != ConsultaStatus.PROPOSTA) {
+            throw new IllegalStateException("Consulta não está em estado PROPOSTA");
+        }
+
+        if (consulta.getExpiresAt().isBefore(OffsetDateTime.now())) {
+            throw new IllegalStateException("Proposta expirada");
+        }
+
+        // Atualiza status para AGENDADA
+        consulta.setStatus(ConsultaStatus.AGENDADA);
+        consulta = consultaRepository.save(consulta);
+
+        return AgendamentoResponseDto.builder()
+                .consultaId(consulta.getId())
+                .status(consulta.getStatus().name())
+                .inicio(consulta.getInicio())
+                .fim(consulta.getFim())
+                .ubsNome(consulta.getUbs().getNome())
+                .profissionalNome(consulta.getProfissional().getNome())
+                .build();
+    }
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\service\SugestaoService.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.service;
+
+import br.com.fiap.hackaton.record.RankedSlot;
+import br.com.fiap.hackaton.dto.SugestaoRequestDto;
+import br.com.fiap.hackaton.dto.SugestaoResponseDto;
+import br.com.fiap.hackaton.enums.ConsultaStatus;
+import br.com.fiap.hackaton.enums.Especialidade;
+import br.com.fiap.hackaton.exceptions.NoSuggestionException;
+import br.com.fiap.hackaton.model.Consulta;
+import br.com.fiap.hackaton.repository.ConsultaRepository;
+import br.com.fiap.hackaton.repository.PacienteRepository;
+import br.com.fiap.hackaton.repository.SlotAgendaRepository;
+import br.com.fiap.hackaton.util.GeoUtils;
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+import java.time.OffsetDateTime;
+import java.util.Comparator;
+import java.util.Optional;
+
+@Service
+@RequiredArgsConstructor
+public class SugestaoService {
+    private final PacienteRepository pacienteRepository;
+    private final SlotAgendaRepository slotAgendaRepository;
+    private final ConsultaRepository consultaRepository;
+    private final TriagemService triagemService;
+
+    @Value("${app.sugestao.defaultRadiusKm:15}")
+    private double defaultRadiusKm;
+
+    @Value("${app.sugestao.holdMinutes:5}")
+    private long holdMinutes;
+
+    @Transactional
+    public SugestaoResponseDto sugerir(SugestaoRequestDto req) {
+        var paciente = pacienteRepository.findById(req.getPacienteId())
+                .orElseThrow(() -> new EntityNotFoundException("Paciente não encontrado"));
+        if (!paciente.isAtivo()) {
+            throw new IllegalStateException("Paciente inativo");
+        }
+        if (!"clinico_geral".equalsIgnoreCase(req.getTipoConsulta())) {
+            throw new IllegalArgumentException("Tipo de consulta não suportado no MVP");
+        }
+
+        var prioridade = triagemService.calcularPrioridade(req.getSintomas());
+        var agora = OffsetDateTime.now();
+        var raioKm = Optional.ofNullable(req.getRaioKm()).orElse(defaultRadiusKm);
+
+        // Carrega slots futuros para CLINICO_GERAL
+        var slots = slotAgendaRepository.findDisponiveisByEspecialidade(Especialidade.CLINICO_GERAL, agora);
+
+        // Escolhe o melhor slot: prioridade (via triagem) -> proximidade -> data/hora
+        var melhor = slots.stream()
+                .map(s -> new RankedSlot(s,
+                        GeoUtils.haversineKm(req.getLatitude(), req.getLongitude(),
+                                s.getUbs().getLatitude(), s.getUbs().getLongitude())))
+                .filter(rs -> rs.distanciaKm() <= raioKm)
+                .sorted(Comparator
+                        .comparingInt((RankedSlot rs) -> triagemService.prioridadeRank(prioridade)).reversed()
+                        .thenComparingDouble(rs -> rs.distanciaKm())
+                        .thenComparing(rs -> rs.slot().getInicio()))
+                .map(rs -> rs.slot())
+                .findFirst()
+                .orElse(null);
+
+        if (melhor == null) {
+            throw new NoSuggestionException("Nenhum horário disponível dentro do raio");
+        }
+
+        // Verifica conflito de horário do paciente
+        var conflitos = consultaRepository.findConflitos(paciente.getId(), melhor.getInicio(), melhor.getFim());
+        if (!conflitos.isEmpty()) {
+            throw new NoSuggestionException("Conflito com outra consulta do paciente");
+        }
+
+        // Cria consulta PROPOSTA (hold lógico com TTL)
+        var proposta = Consulta.builder()
+                .paciente(paciente)
+                .profissional(melhor.getProfissional())
+                .ubs(melhor.getUbs())
+                .slot(melhor)
+                .inicio(melhor.getInicio())
+                .fim(melhor.getFim())
+                .status(ConsultaStatus.PROPOSTA)
+                .expiresAt(agora.plusMinutes(holdMinutes))
+                .sintomas(req.getSintomas())
+                .prioridade(prioridade)
+                .build();
+        proposta = consultaRepository.save(proposta);
+
+        var ubs = melhor.getUbs();
+        var prof = melhor.getProfissional();
+
+        return SugestaoResponseDto.builder()
+                .consultaId(proposta.getId())
+                .ubsId(ubs.getId())
+                .ubsNome(ubs.getNome())
+                .profissionalId(prof.getId())
+                .profissionalNome(prof.getNome())
+                .especialidade(prof.getEspecialidade().name())
+                .inicio(melhor.getInicio())
+                .fim(melhor.getFim())
+                .distanciaKm(GeoUtils.haversineKm(req.getLatitude(), req.getLongitude(), ubs.getLatitude(), ubs.getLongitude()))
+                .prioridade(prioridade)
+                .expiresAt(proposta.getExpiresAt())
+                .build();
+    }
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\service\SugestoesService.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.service;
+
+import br.com.fiap.hackaton.dto.SugestoesItemDto;
+import br.com.fiap.hackaton.dto.SugestoesRequestDto;
+import br.com.fiap.hackaton.dto.SugestoesResponseDto;
+import br.com.fiap.hackaton.enums.Especialidade;
+import br.com.fiap.hackaton.model.SlotAgenda;
+import br.com.fiap.hackaton.repository.ConsultaRepository;
+import br.com.fiap.hackaton.repository.PacienteRepository;
+import br.com.fiap.hackaton.repository.SlotAgendaRepository;
+import br.com.fiap.hackaton.util.GeoUtils;
+import jakarta.persistence.EntityNotFoundException;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.time.ZoneId;
+import java.util.*;
+import java.util.stream.Collectors;
+
+@Service
+@RequiredArgsConstructor
+public class SugestoesService {
+    private final PacienteRepository pacienteRepository;
+    private final SlotAgendaRepository slotAgendaRepository;
+    private final ConsultaRepository consultaRepository;
+    private final TriagemService triagemService;
+
+    @Value("${app.sugestao.defaultRadiusKm:15}")
+    private double defaultRadiusKm;
+
+    @Transactional(readOnly = true)
+    public SugestoesResponseDto listar(SugestoesRequestDto req) {
+        var paciente = pacienteRepository.findById(req.getPacienteId())
+                .orElseThrow(() -> new EntityNotFoundException("Paciente não encontrado"));
+
+        if (!paciente.isAtivo()) {
+            throw new IllegalStateException("Paciente inativo");
+        }
+        if (!"clinico_geral".equalsIgnoreCase(req.getTipoConsulta())) {
+            throw new IllegalArgumentException("Tipo de consulta não suportado no MVP");
+        }
+
+        var prioridade = triagemService.calcularPrioridade(req.getSintomas());
+        var agora = OffsetDateTime.now();
+        var raioKm = Optional.ofNullable(req.getRaioKm()).orElse(defaultRadiusKm);
+
+        // Janela de busca: agora até agora + janelaDias
+        var fimJanela = agora.plusDays(Math.max(req.getJanelaDias(), 1));
+
+        // Slots disponíveis no período
+        var slots = slotAgendaRepository.findDisponiveisByEspecialidade(Especialidade.CLINICO_GERAL, agora)
+                .stream()
+                .filter(s -> !s.getInicio().isAfter(fimJanela))
+                .toList();
+
+        // Mapear slots com distância e filtrar
+        var candidatos = slots.stream()
+                .map(s -> new RankedSlot(s, distancia(req.getLatitude(), req.getLongitude(), s)))
+                .filter(rs -> rs.distanciaKm <= raioKm)
+                .filter(rs -> consultaRepository.findConflitos(
+                        paciente.getId(), rs.slot.getInicio(), rs.slot.getFim()
+                ).isEmpty())
+                .collect(Collectors.toList());
+
+        // Ordenação
+        candidatos.sort(Comparator
+                .comparingInt((RankedSlot rs) -> triagemService.prioridadeRank(prioridade)).reversed()
+                .thenComparingDouble(rs -> rs.distanciaKm)
+                .thenComparing(rs -> rs.slot.getInicio())
+        );
+
+        // Se diasUnicos: pegar só 1 slot por dia
+        List<RankedSlot> selecionados;
+        if (req.isDiasUnicos()) {
+            var zone = ZoneId.of("America/Sao_Paulo");
+            Map<LocalDate, RankedSlot> porDia = new LinkedHashMap<>();
+            for (var rs : candidatos) {
+                var dia = rs.slot.getInicio().atZoneSameInstant(zone).toLocalDate();
+                porDia.putIfAbsent(dia, rs); // pega só o primeiro (já ordenado)
+            }
+            selecionados = new ArrayList<>(porDia.values());
+        } else {
+            selecionados = candidatos;
+        }
+
+        // Limitar ao número pedido
+        int limite = Math.max(req.getQtd(), 1);
+        if (selecionados.size() > limite) {
+            selecionados = selecionados.subList(0, limite);
+        }
+
+        // Mapear para DTO
+        var itens = selecionados.stream().map(rs -> {
+            var ubs = rs.slot.getUbs();
+            var prof = rs.slot.getProfissional();
+            return SugestoesItemDto.builder()
+                    .slotId(rs.slot.getId())
+                    .ubsId(ubs.getId())
+                    .ubsNome(ubs.getNome())
+                    .profissionalId(prof.getId())
+                    .profissionalNome(prof.getNome())
+                    .especialidade(prof.getEspecialidade().name())
+                    .inicio(rs.slot.getInicio())
+                    .fim(rs.slot.getFim())
+                    .distanciaKm(rs.distanciaKm)
+                    .prioridade(prioridade)
+                    .build();
+        }).toList();
+
+        return SugestoesResponseDto.builder()
+                .opcoes(itens)
+                .build();
+    }
+
+    private static double distancia(double lat, double lon, SlotAgenda s) {
+        return GeoUtils.haversineKm(lat, lon, s.getUbs().getLatitude(), s.getUbs().getLongitude());
+    }
+
+    private record RankedSlot(SlotAgenda slot, double distanciaKm) {}
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\service\TriagemService.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.service;
+
+import io.micrometer.common.util.StringUtils;
+import org.springframework.stereotype.Service;
+
+@Service
+public class TriagemService {
+    // MVP: regras simples por palavras-chave
+    public String calcularPrioridade(String sintomas) {
+        if (StringUtils.isBlank(sintomas)) return "Baixa";
+        var s = sintomas.toLowerCase();
+        if (s.contains("dor no peito") || s.contains("desmaio") || s.contains("falta de ar")) return "Alta";
+        if (s.contains("febre") || s.contains("infecção") || s.contains("queda")) return "Media";
+        return "Baixa";
+    }
+
+    // Para ordenação: Alta > Media > Baixa
+    public int prioridadeRank(String prioridade) {
+        return switch (prioridade) {
+            case "Alta" -> 3;
+            case "Media" -> 2;
+            default -> 1;
+        };
+    }
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\service\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\util\GeoUtils.java 
+======================================== 
+ 
+package br.com.fiap.hackaton.util;
+
+public final class GeoUtils {
+    private static final double EARTH_RADIUS_KM = 6371.0;
+    private GeoUtils() {}
+
+    public static double haversineKm(double lat1, double lon1, double lat2, double lon2) {
+        double dLat = Math.toRadians(lat2 - lat1);
+        double dLon = Math.toRadians(lon2 - lon1);
+        double a = Math.sin(dLat/2) * Math.sin(dLat/2)
+                + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
+                * Math.sin(dLon/2) * Math.sin(dLon/2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return EARTH_RADIUS_KM * c;
+    }
+}
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\util\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\resources\application.properties 
+======================================== 
+ 
+spring.datasource.url=jdbc:h2:mem:agendamento
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+# Console do H2
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# TTL da proposta (minutos)
+app.sugestao.holdMinutes=5
+
+# Raio padr�o para busca (km)
+app.sugestao.defaultRadiusKm=15
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=false
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.defer-datasource-initialization=true
+
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\src\main\resources\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\application.properties 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\controller\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\dto\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\enums\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\exceptions\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\model\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\record\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\repository\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\service\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\classes\br\com\fiap\hackaton\util\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\generated-sources\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\generated-sources\annotations\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\generated-test-sources\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\generated-test-sources\test-annotations\Dockerfile 
+======================================== 
+ 
+ 
+ 
+======================================== 
+ARQUIVO: C:\Users\Vinicius\Documents\ESTUDO\organizado\posgraduacao\fiap_arquiteturajava\FASE 5\trabalho final\hackaton-fiap-fase5\target\test-classes\Dockerfile 
+======================================== 
+ 
+ 
