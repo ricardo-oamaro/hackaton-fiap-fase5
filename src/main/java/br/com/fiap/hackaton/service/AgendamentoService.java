@@ -42,4 +42,49 @@ public class AgendamentoService {
                 .profissionalNome(consulta.getProfissional().getNome())
                 .build();
     }
+
+    @Transactional
+    public AgendamentoResponseDto recusar(Long consultaId) {
+        var consulta = consultaRepository.findById(consultaId)
+                .orElseThrow(() -> new EntityNotFoundException("Consulta não encontrada"));
+
+        if (consulta.getStatus() != ConsultaStatus.PROPOSTA) {
+            throw new IllegalStateException("Só propostas podem ser recusadas");
+        }
+
+        // Atualiza status para RECUSADA
+        consulta.setStatus(ConsultaStatus.RECUSADA);
+        consulta = consultaRepository.save(consulta);
+
+        return AgendamentoResponseDto.builder()
+                .consultaId(consulta.getId())
+                .status("Recusada") // resposta amigável
+                .inicio(consulta.getInicio())
+                .fim(consulta.getFim())
+                .ubsNome(consulta.getUbs().getNome())
+                .profissionalNome(consulta.getProfissional().getNome())
+                .build();
+    }
+
+    @Transactional
+    public AgendamentoResponseDto cancelar(Long consultaId) {
+        var consulta = consultaRepository.findById(consultaId)
+                .orElseThrow(() -> new EntityNotFoundException("Consulta não encontrada"));
+
+        if (consulta.getStatus() != ConsultaStatus.AGENDADA) {
+            throw new IllegalStateException("Só consultas AGENDADAS podem ser canceladas");
+        }
+
+        consulta.setStatus(ConsultaStatus.CANCELADA);
+        consulta = consultaRepository.save(consulta);
+
+        return AgendamentoResponseDto.builder()
+                .consultaId(consulta.getId())
+                .status("Cancelada")
+                .inicio(consulta.getInicio())
+                .fim(consulta.getFim())
+                .ubsNome(consulta.getUbs().getNome())
+                .profissionalNome(consulta.getProfissional().getNome())
+                .build();
+    }
 }

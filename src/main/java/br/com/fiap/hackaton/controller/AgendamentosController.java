@@ -42,6 +42,26 @@ public class AgendamentosController {
         return ResponseEntity.ok(dto);
     }
 
+    @RestController
+    @RequestMapping("/agendamentos")
+    @RequiredArgsConstructor
+    public class AgendamentoController {
+
+        private final AgendamentoService agendamentoService;
+
+        @PostMapping("/{id}/recusar")
+        public ResponseEntity<AgendamentoResponseDto> recusar(@PathVariable Long id) {
+            var dto = agendamentoService.recusar(id);
+            return ResponseEntity.ok(dto);
+        }
+    }
+
+    @PostMapping("/{id}/cancelar")
+    public ResponseEntity<AgendamentoResponseDto> cancelar(@PathVariable Long id) {
+        var dto = agendamentoService.cancelar(id);
+        return ResponseEntity.ok(dto);
+    }
+
     // === Error handlers padronizados ===
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidation(MethodArgumentNotValidException ex) {
