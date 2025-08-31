@@ -5,5 +5,6 @@ public enum ConsultaStatus {
     AGENDADA,
     RECUSADA,
     EXPIRADA,
-    CANCELADA
+    CANCELADA,
+    REALIZADA  // Novo status adicionado para consultas já realizadas
 }

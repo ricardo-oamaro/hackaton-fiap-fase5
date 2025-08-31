@@ -50,11 +50,15 @@ public class SugestaoService {
         var agora = OffsetDateTime.now();
         var raioKm = Optional.ofNullable(req.getRaioKm()).orElse(defaultRadiusKm);
 
-        // Carrega slots futuros para CLINICO_GERAL
-        var slots = slotAgendaRepository.findDisponiveisByEspecialidade(Especialidade.CLINICO_GERAL, agora);
+        var todosSlots = slotAgendaRepository.findDisponiveisByEspecialidade(Especialidade.CLINICO_GERAL, agora);
 
-        // Escolhe o melhor slot: prioridade (via triagem) -> proximidade -> data/hora
-        var melhor = slots.stream()
+        var ocupados = consultaRepository.findSlotsOcupados();
+
+        var livres = todosSlots.stream()
+                .filter(s -> !ocupados.contains(s.getId()))
+                .toList();
+
+        var melhor = livres.stream()
                 .map(s -> new RankedSlot(s,
                         GeoUtils.haversineKm(req.getLatitude(), req.getLongitude(),
                                 s.getUbs().getLatitude(), s.getUbs().getLongitude())))
@@ -71,13 +75,11 @@ public class SugestaoService {
             throw new NoSuggestionException("Nenhum horário disponível dentro do raio");
         }
 
-        // Verifica conflito de horário do paciente
         var conflitos = consultaRepository.findConflitos(paciente.getId(), melhor.getInicio(), melhor.getFim());
         if (!conflitos.isEmpty()) {
             throw new NoSuggestionException("Conflito com outra consulta do paciente");
         }
 
-        // Cria consulta PROPOSTA (hold lógico com TTL)
         var proposta = Consulta.builder()
                 .paciente(paciente)
                 .profissional(melhor.getProfissional())

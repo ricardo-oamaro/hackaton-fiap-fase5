@@ -21,4 +21,5 @@ public class AgendamentoResponseDto {
 
     private String ubsNome;
     private String profissionalNome;
+    private String especialidade; // Campo adicionado para o tipo de atendimento
 }
