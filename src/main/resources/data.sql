@@ -1,3 +1,13 @@
+-- Inserir especialidades médicas
+INSERT INTO especialidade (nome, descricao, ativo) VALUES ('Clínico Geral', 'Atendimento médico geral', true);
+INSERT INTO especialidade (nome, descricao, ativo) VALUES ('Pediatria', 'Atendimento para crianças e adolescentes', true);
+INSERT INTO especialidade (nome, descricao, ativo) VALUES ('Ginecologia', 'Saúde da mulher', true);
+INSERT INTO especialidade (nome, descricao, ativo) VALUES ('Cardiologia', 'Tratamento de doenças cardíacas', true);
+INSERT INTO especialidade (nome, descricao, ativo) VALUES ('Ortopedia', 'Tratamento de problemas ósseos e musculares', true);
+INSERT INTO especialidade (nome, descricao, ativo) VALUES ('Dermatologia', 'Tratamento de problemas de pele', true);
+INSERT INTO especialidade (nome, descricao, ativo) VALUES ('Oftalmologia', 'Tratamento de problemas oculares', true);
+INSERT INTO especialidade (nome, descricao, ativo) VALUES ('Psiquiatria', 'Saúde mental', true);
+
 INSERT INTO paciente (id, nome, ativo, latitude, longitude) VALUES (1, 'Maria Silva', true, -23.5505, -46.6333);
 INSERT INTO paciente (id, nome, ativo, latitude, longitude) VALUES (2, 'John Doe', true, -23.5102, -46.6982);
 INSERT INTO paciente (id, nome, ativo, latitude, longitude) VALUES (3, 'Maria Santos', true, -22.5505, -47.6333);

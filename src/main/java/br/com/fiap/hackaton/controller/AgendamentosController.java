@@ -15,6 +15,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.OffsetDateTime;
+import java.util.List;
 
 @RestController
 @RequestMapping("/agendamentos")
@@ -40,6 +41,18 @@ public class AgendamentosController {
     public ResponseEntity<AgendamentoResponseDto> confirmar(@PathVariable Long id) {
         var dto = agendamentoService.confirmar(id);
         return ResponseEntity.ok(dto);
+    }
+
+    @GetMapping("/paciente/{pacienteId}/ativos")
+    public ResponseEntity<List<AgendamentoResponseDto>> listarConsultasAtivas(@PathVariable Long pacienteId) {
+        List<AgendamentoResponseDto> consultas = agendamentoService.buscarConsultasAtivas(pacienteId);
+        return ResponseEntity.ok(consultas);
+    }
+
+    @GetMapping("/paciente/{pacienteId}/historico")
+    public ResponseEntity<List<AgendamentoResponseDto>> listarHistoricoAtendimentos(@PathVariable Long pacienteId) {
+        List<AgendamentoResponseDto> historico = agendamentoService.buscarHistoricoConsultas(pacienteId);
+        return ResponseEntity.ok(historico);
     }
 
     @RestController

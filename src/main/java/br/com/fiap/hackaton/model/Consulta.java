@@ -46,4 +46,7 @@ public class Consulta {
     private String sintomas;
 
     private String prioridade; // Alta/Media/Baixa (string simples no MVP)
+    
+    @ManyToOne(optional = false)
+    private Especialidade tipoAtendimento;
 }

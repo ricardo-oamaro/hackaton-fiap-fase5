@@ -2,6 +2,7 @@ package br.com.fiap.hackaton.service;
 
 import br.com.fiap.hackaton.dto.AgendamentoResponseDto;
 import br.com.fiap.hackaton.enums.ConsultaStatus;
+import br.com.fiap.hackaton.model.Consulta;
 import br.com.fiap.hackaton.repository.ConsultaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -9,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.OffsetDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -86,5 +89,40 @@ public class AgendamentoService {
                 .ubsNome(consulta.getUbs().getNome())
                 .profissionalNome(consulta.getProfissional().getNome())
                 .build();
+    }
+    
+    public List<AgendamentoResponseDto> buscarConsultasAtivas(Long pacienteId) {
+        List<Consulta> consultasAtivas = consultaRepository.findByPacienteIdAndStatusIn(
+            pacienteId,
+            List.of(ConsultaStatus.PROPOSTA, ConsultaStatus.AGENDADA)
+        );
+        return consultasAtivas.stream()
+            .map(consulta -> AgendamentoResponseDto.builder()
+                .consultaId(consulta.getId())
+                .status(consulta.getStatus().name())
+                .inicio(consulta.getInicio())
+                .fim(consulta.getFim())
+                .ubsNome(consulta.getUbs().getNome())
+                .profissionalNome(consulta.getProfissional().getNome())
+                .build())
+            .collect(Collectors.toList());
+    }
+
+    public List<AgendamentoResponseDto> buscarHistoricoConsultas(Long pacienteId) {
+        List<Consulta> historicoConsultas = consultaRepository.findByPacienteIdAndStatusInOrderByInicioDesc(
+            pacienteId,
+            List.of(ConsultaStatus.RECUSADA, ConsultaStatus.EXPIRADA,
+                   ConsultaStatus.CANCELADA, ConsultaStatus.REALIZADA)
+        );
+        return historicoConsultas.stream()
+            .map(consulta -> AgendamentoResponseDto.builder()
+                .consultaId(consulta.getId())
+                .status(consulta.getStatus().name())
+                .inicio(consulta.getInicio())
+                .fim(consulta.getFim())
+                .ubsNome(consulta.getUbs().getNome())
+                .profissionalNome(consulta.getProfissional().getNome())
+                .build())
+            .collect(Collectors.toList());
     }
 }

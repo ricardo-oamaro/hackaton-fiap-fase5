@@ -25,4 +25,10 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
          or (c.status = 'PROPOSTA' and c.expiresAt > CURRENT_TIMESTAMP)
     """)
     List<Long> findSlotsOcupados();
+    
+    // Novo método para buscar consultas ativas por paciente
+    List<Consulta> findByPacienteIdAndStatusIn(Long pacienteId, List<ConsultaStatus> statusList);
+    
+    // Novo método para buscar histórico de consultas por paciente
+    List<Consulta> findByPacienteIdAndStatusInOrderByInicioDesc(Long pacienteId, List<ConsultaStatus> statusList);
 }
