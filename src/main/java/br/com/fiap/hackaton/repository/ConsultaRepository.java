@@ -1,6 +1,7 @@
 package br.com.fiap.hackaton.repository;
 
 import br.com.fiap.hackaton.enums.ConsultaStatus;
+import br.com.fiap.hackaton.enums.Especialidade;
 import br.com.fiap.hackaton.model.Consulta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -25,4 +26,7 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
          or (c.status = 'PROPOSTA' and c.expiresAt > CURRENT_TIMESTAMP)
     """)
     List<Long> findSlotsOcupados();
+
+    @Query("SELECT COUNT(c) FROM Consulta c WHERE c.profissional.especialidade = :esp AND c.status = 'PROPOSTA'")
+    long countPacientesAguardando(@Param("esp") Especialidade esp);
 }

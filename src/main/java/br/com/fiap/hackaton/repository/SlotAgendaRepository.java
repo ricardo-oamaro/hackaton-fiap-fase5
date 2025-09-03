@@ -13,4 +13,9 @@ public interface SlotAgendaRepository extends JpaRepository<SlotAgenda, Long> {
     @Query("SELECT s FROM SlotAgenda s WHERE s.profissional.especialidade = :esp AND s.inicio >= :inicio")
     List<SlotAgenda> findDisponiveisByEspecialidade(@Param("esp") Especialidade esp,
                                                     @Param("inicio") OffsetDateTime inicio);
+
+    @Query("SELECT s FROM SlotAgenda s WHERE s.profissional.especialidade = :esp AND s.inicio BETWEEN :start AND :end")
+    List<SlotAgenda> findByEspecialidadeAndDate(@Param("esp") Especialidade esp,
+                                                @Param("start") OffsetDateTime start,
+                                                @Param("end") OffsetDateTime end);
 }
