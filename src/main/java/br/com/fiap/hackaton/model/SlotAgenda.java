@@ -18,18 +18,22 @@ import java.time.OffsetDateTime;
         @Index(name = "idx_slot_ubs_inicio", columnList = "ubs_id,inicio")
 })
 public class SlotAgenda {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
+    @JoinColumn(name = "profissional_id", nullable = false)
     private Profissional profissional;
 
-    @ManyToOne(optional = false)
+    @ManyToOne
+    @JoinColumn(name = "ubs_id", nullable = false)
     private UBS ubs;
 
     private OffsetDateTime inicio;
     private OffsetDateTime fim;
 
-    // tipo de atendimento simplificado (igual à especialidade principal do profissional no MVP)
+    private boolean bloqueado;
+
 }

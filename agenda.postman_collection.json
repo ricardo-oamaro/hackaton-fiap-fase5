@@ -1,0 +1,35 @@
+{
+	"info": {
+		"_postman_id": "64f5fd32-01ff-46a2-bdf5-d0e8d43c1d56",
+		"name": "TechChallenge - 5ª fase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4824164"
+	},
+	"item": [
+		{
+			"name": "Agenda",
+			"item": [
+				{
+					"name": "Buscar Agenda por Especialidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/agenda/cardiologia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"agenda",
+								"cardiologia"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
