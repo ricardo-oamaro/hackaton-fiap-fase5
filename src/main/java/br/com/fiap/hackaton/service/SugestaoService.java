@@ -51,10 +51,18 @@ public class SugestaoService {
         var raioKm = Optional.ofNullable(req.getRaioKm()).orElse(defaultRadiusKm);
 
         // Carrega slots futuros para CLINICO_GERAL
-        var slots = slotAgendaRepository.findDisponiveisByEspecialidade(Especialidade.CLINICO_GERAL, agora);
+        var todosSlots = slotAgendaRepository.findDisponiveisByEspecialidade(Especialidade.CLINICO_GERAL, agora);
+
+        // 🔒 Recupera slots ocupados
+        var ocupados = consultaRepository.findSlotsOcupados();
+
+        // 🔎 Filtra apenas slots livres
+        var livres = todosSlots.stream()
+                .filter(s -> !ocupados.contains(s.getId()))
+                .toList();
 
         // Escolhe o melhor slot: prioridade (via triagem) -> proximidade -> data/hora
-        var melhor = slots.stream()
+        var melhor = livres.stream()
                 .map(s -> new RankedSlot(s,
                         GeoUtils.haversineKm(req.getLatitude(), req.getLongitude(),
                                 s.getUbs().getLatitude(), s.getUbs().getLongitude())))
