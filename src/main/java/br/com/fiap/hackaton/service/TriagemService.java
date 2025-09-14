@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TriagemService {
-    // MVP: regras simples por palavras-chave
     public String calcularPrioridade(String sintomas) {
         if (StringUtils.isBlank(sintomas)) return "Baixa";
         var s = sintomas.toLowerCase();
