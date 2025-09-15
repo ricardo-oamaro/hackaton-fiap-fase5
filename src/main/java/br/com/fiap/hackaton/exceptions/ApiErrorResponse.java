@@ -1,4 +1,4 @@
-package br.com.fiap.hackaton.dto;
+package br.com.fiap.hackaton.exceptions;
 
 import lombok.Builder;
 import lombok.Data;

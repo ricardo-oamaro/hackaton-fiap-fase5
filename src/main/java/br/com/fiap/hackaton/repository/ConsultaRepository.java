@@ -27,6 +27,12 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
     """)
     List<Long> findSlotsOcupados();
 
+    @Query("select c.slot.id from Consulta c where c.status = 'AGENDADA'")
+    List<Long> findSlotsAgendados();
+
+    @Query("select c.slot.id from Consulta c where c.status = 'PROPOSTA' and c.expiresAt > CURRENT_TIMESTAMP")
+    List<Long> findSlotsPropostaAtivas();
+
     @Query("SELECT COUNT(c) FROM Consulta c WHERE c.profissional.especialidade = :esp AND c.status = 'PROPOSTA'")
     long countPacientesAguardando(@Param("esp") Especialidade esp);
 }

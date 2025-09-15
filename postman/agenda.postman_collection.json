@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "64f5fd32-01ff-46a2-bdf5-d0e8d43c1d56",
+		"name": "TechChallenge - 5ª fase (Agenda)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4824164"
+	},
+	"item": [
+		{
+			"name": "Agenda",
+			"item": [
+				{
+					"name": "Buscar agenda por especialidade - exemplo (cardiologia)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Status 200', function () { pm.response.to.have.status(200); });",
+									"pm.test('Retorna array ou vazio', function () { var body = pm.response.json(); pm.expect(body).to.be.an('array'); });",
+									"pm.test('Se existir, valida estrutura de agenda', function () { var body = pm.response.json(); if (body.length>0) { pm.expect(body[0]).to.have.property('data'); pm.expect(body[0]).to.have.property('profissionais'); } });"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/agenda/cardiologia",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"agenda",
+								"cardiologia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar agenda por especialidade - exemplo (clinico_geral)",
+					"event": [
+						{
+							"listen": "test",
+							"script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });"] }
+						}
+					],
+					"request": { "method": "GET", "header": [], "url": { "raw": "http://localhost:9090/agenda/clinico_geral", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agenda", "clinico_geral"] } },
+					"response": []
+				},
+				{
+					"name": "Buscar agenda por especialidade - exemplo (pediatria)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });"] } } ],
+					"request": { "method": "GET", "header": [], "url": { "raw": "http://localhost:9090/agenda/pediatria", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agenda", "pediatria"] } },
+					"response": []
+				},
+				{
+					"name": "Contar pacientes aguardando por especialidade (GET /agenda/{especialidade}/aguardando)",
+					"event": [
+						{
+							"listen": "test",
+							"script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });","pm.test('Retorna número', function () { var v = pm.response.json(); pm.expect(v).to.be.a('number'); });"] }
+						}
+					],
+					"request": { "method": "GET", "header": [], "url": { "raw": "http://localhost:9090/agenda/cardiologia/aguardando", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agenda", "cardiologia", "aguardando"] } },
+					"response": []
+				},
+				{
+					"name": "Bloquear slot - válido (ADMIN) (PATCH /agenda/slots/{id}/bloquear)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('204 No Content', function () { pm.response.to.have.status(204); });"] } } ],
+					"request": { "method": "PATCH", "header": [ { "key": "X-User-Role", "value": "ADMIN" } ], "url": { "raw": "http://localhost:9090/agenda/slots/1/bloquear", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agenda", "slots", "1", "bloquear"] } },
+					"response": []
+				},
+				{
+					"name": "Bloquear slot - proibido (sem role) (espera 403)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('403 Forbidden', function () { pm.response.to.have.status(403); });"] } } ],
+					"request": { "method": "PATCH", "header": [], "url": { "raw": "http://localhost:9090/agenda/slots/1/bloquear", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agenda", "slots", "1", "bloquear"] } },
+					"response": []
+				},
+				{
+					"name": "Bloquear slot - não encontrado (ADMIN) (espera 404)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('404 Not Found', function () { pm.response.to.have.status(404); });"] } } ],
+					"request": { "method": "PATCH", "header": [ { "key": "X-User-Role", "value": "ADMIN" } ], "url": { "raw": "http://localhost:9090/agenda/slots/9999/bloquear", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agenda", "slots", "9999", "bloquear"] } },
+					"response": []
+				},
+				{
+					"name": "Desbloquear slot - válido (ADMIN) (PATCH /agenda/slots/{id}/desbloquear)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('204 No Content', function () { pm.response.to.have.status(204); });"] } } ],
+					"request": { "method": "PATCH", "header": [ { "key": "X-User-Role", "value": "ADMIN" } ], "url": { "raw": "http://localhost:9090/agenda/slots/1/desbloquear", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agenda", "slots", "1", "desbloquear"] } },
+					"response": []
+				},
+				{
+					"name": "Desbloquear slot - proibido (role=USER) (espera 403)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('403 Forbidden', function () { pm.response.to.have.status(403); });"] } } ],
+					"request": { "method": "PATCH", "header": [ { "key": "X-User-Role", "value": "USER" } ], "url": { "raw": "http://localhost:9090/agenda/slots/1/desbloquear", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agenda", "slots", "1", "desbloquear"] } },
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agendamentos",
+			"item": [
+				{
+					"name": "Sugerir horário (POST /agendamentos/sugestao) - válido (paciente 1)",
+					"event": [
+						{
+							"listen": "test",
+							"script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });","pm.test('Resposta contém consultaId', function () { var json = pm.response.json(); pm.expect(json).to.have.property('consultaId'); });"] }
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [ { "key": "Content-Type", "value": "application/json" } ],
+						"body": { "mode": "raw", "raw": "{\n  \"pacienteId\": 1,\n  \"tipoConsulta\": \"clinico_geral\",\n  \"sintomas\": \"Febre e dor de cabeça\",\n  \"latitude\": -23.5505,\n  \"longitude\": -46.6333,\n  \"raioKm\": 15\n}" },
+						"url": { "raw": "http://localhost:9090/agendamentos/sugestao", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agendamentos", "sugestao"] }
+					},
+					"response": []
+				},
+				{
+					"name": "Sugerir horário (POST /agendamentos/sugestao) - válido (paciente 2, pediatria)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });"] } } ],
+					"request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"pacienteId\": 2,\n  \"tipoConsulta\": \"PEDIATRIA\",\n  \"sintomas\": \"Vômito e diarreia\",\n  \"latitude\": -23.5200,\n  \"longitude\": -46.6500\n}" }, "url": { "raw": "http://localhost:9090/agendamentos/sugestao", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agendamentos", "sugestao"] } },
+					"response": []
+				},
+				{
+					"name": "Sugerir horário - erro: pacienteId ausente (espera 400)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('400 Bad Request', function () { pm.response.to.have.status(400); });","pm.test('Retorna mensagem de erro', function () { var json = pm.response.json(); pm.expect(json).to.have.property('message'); });"] } } ],
+					"request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"tipoConsulta\": \"CLINICO_GERAL\",\n  \"sintomas\": \"Tosse seca\",\n  \"latitude\": -23.5505,\n  \"longitude\": -46.6333\n}" }, "url": { "raw": "http://localhost:9090/agendamentos/sugestao", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agendamentos", "sugestao"] } },
+					"response": []
+				},
+				{
+					"name": "Sugerir horário - erro: latitude inválida (espera 400)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('400 Bad Request', function () { pm.response.to.have.status(400); });"] } } ],
+					"request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"pacienteId\": 1,\n  \"tipoConsulta\": \"PEDIATRIA\",\n  \"sintomas\": \"Vômito\",\n  \"latitude\": 200.0,\n  \"longitude\": -46.6333\n}" }, "url": { "raw": "http://localhost:9090/agendamentos/sugestao", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agendamentos", "sugestao"] } },
+					"response": []
+				},
+				{
+					"name": "Listar sugestões (POST /agendamentos/sugestoes) - válido",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });","pm.test('Retorna opcoes array', function () { var json = pm.response.json(); pm.expect(json).to.have.property('opcoes'); pm.expect(json.opcoes).to.be.an('array'); });"] } } ],
+					"request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"pacienteId\": 1,\n  \"tipoConsulta\": \"CARDIOLOGIA\",\n  \"sintomas\": \"Dor no peito\",\n  \"latitude\": -23.5520,\n  \"longitude\": -46.6300,\n  \"raioKm\": 10,\n  \"qtd\": 3,\n  \"diasUnicos\": true,\n  \"janelaDias\": 14\n}" }, "url": { "raw": "http://localhost:9090/agendamentos/sugestoes", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agendamentos", "sugestoes"] } },
+					"response": []
+				},
+				{
+					"name": "Listar sugestões - erro: sintomas em branco (espera 400)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('400 Bad Request', function () { pm.response.to.have.status(400); });","pm.test('Retorna mensagem de erro', function () { var json = pm.response.json(); pm.expect(json).to.have.property('message'); });"] } } ],
+					"request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "body": { "mode": "raw", "raw": "{\n  \"pacienteId\": 1,\n  \"tipoConsulta\": \"CLINICO_GERAL\",\n  \"sintomas\": \"\",\n  \"latitude\": -23.5520,\n  \"longitude\": -46.6300\n}" }, "url": { "raw": "http://localhost:9090/agendamentos/sugestoes", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agendamentos", "sugestoes"] } },
+					"response": []
+				},
+				{
+					"name": "Confirmar agendamento (POST /agendamentos/{id}/confirmar) - válido (id=1)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('Status 200', function () { pm.response.to.have.status(200); });","pm.test('Status AGENDADA', function () { var json = pm.response.json(); pm.expect(json.status).to.eql('AGENDADA'); });"] } } ],
+					"request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "url": { "raw": "http://localhost:9090/agendamentos/1/confirmar", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agendamentos", "1", "confirmar"] } },
+					"response": []
+				},
+				{
+					"name": "Confirmar agendamento - não encontrado (id=999) (espera 404)",
+					"event": [ { "listen": "test", "script": { "type": "text/javascript", "exec": ["pm.test('404 Not Found', function () { pm.response.to.have.status(404); });"] } } ],
+					"request": { "method": "POST", "header": [ { "key": "Content-Type", "value": "application/json" } ], "url": { "raw": "http://localhost:9090/agendamentos/999/confirmar", "protocol": "http", "host": ["localhost"], "port": "9090", "path": ["agendamentos", "999", "confirmar"] } },
+					"response": []
+				}
+			]
+		}
+	]
+}

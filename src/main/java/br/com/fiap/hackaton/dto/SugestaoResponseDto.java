@@ -9,7 +9,7 @@ import java.time.OffsetDateTime;
 @Data
 @Builder
 public class SugestaoResponseDto {
-    private Long consultaId; // id da proposta criada
+    private Long consultaId;
 
     private Long ubsId;
     private String ubsNome;

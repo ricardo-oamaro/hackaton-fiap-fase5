@@ -9,7 +9,7 @@ public class SugestaoRequestDto {
     private Long pacienteId;
 
     @NotBlank
-    private String tipoConsulta; // "clinico_geral" no MVP
+    private String tipoConsulta;
 
     @NotBlank
     private String sintomas;

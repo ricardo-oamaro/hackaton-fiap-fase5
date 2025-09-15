@@ -1,9 +1,11 @@
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\controller\AgendaController.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\controller\AgendamentosController.java
+C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\AgendaDiaDto.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\AgendamentoResponseDto.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\AgendaResponseDto.java
-C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\ApiErrorResponse.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\ErrorResponseDto.java
+C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\ProfissionalAgendaDto.java
+C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SlotDto.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestaoRequestDto.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestaoResponseDto.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestoesItemDto.java
@@ -11,6 +13,7 @@ C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestoesRe
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\dto\SugestoesResponseDto.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\enums\ConsultaStatus.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\enums\Especialidade.java
+C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\exceptions\ApiErrorResponse.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\exceptions\NoSuggestionException.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\HackatonFiapFase5Application.java
 C:\Temp-C\hackaton-fiap-fase5\src\main\java\br\com\fiap\hackaton\model\Consulta.java

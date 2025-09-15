@@ -23,7 +23,6 @@ public class Paciente {
 
     private boolean ativo;
 
-    // endereço simplificado
     private Double latitude;
     private Double longitude;
 }

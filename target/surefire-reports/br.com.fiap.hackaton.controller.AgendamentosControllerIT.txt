@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: br.com.fiap.hackaton.controller.AgendamentosControllerIT
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.804 s <<< FAILURE! -- in br.com.fiap.hackaton.controller.AgendamentosControllerIT
+br.com.fiap.hackaton.controller.AgendamentosControllerIT.listar_sugestoes_e_erro_validacao -- Time elapsed: 0.658 s <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.message"
+	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:351)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertExistsAndReturn(JsonPathExpectationsHelper.java:388)
+	at org.springframework.test.util.JsonPathExpectationsHelper.exists(JsonPathExpectationsHelper.java:239)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$exists$3(JsonPathResultMatchers.java:124)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at br.com.fiap.hackaton.controller.AgendamentosControllerIT.listar_sugestoes_e_erro_validacao(AgendamentosControllerIT.java:91)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['message']
+
+br.com.fiap.hackaton.controller.AgendamentosControllerIT.sugerir_erro_validacao_ausencia_paciente -- Time elapsed: 0.017 s <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.message"
+	at org.springframework.test.util.JsonPathExpectationsHelper.evaluateJsonPath(JsonPathExpectationsHelper.java:351)
+	at org.springframework.test.util.JsonPathExpectationsHelper.assertExistsAndReturn(JsonPathExpectationsHelper.java:388)
+	at org.springframework.test.util.JsonPathExpectationsHelper.exists(JsonPathExpectationsHelper.java:239)
+	at org.springframework.test.web.servlet.result.JsonPathResultMatchers.lambda$exists$3(JsonPathResultMatchers.java:124)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at br.com.fiap.hackaton.controller.AgendamentosControllerIT.sugerir_erro_validacao_ausencia_paciente(AgendamentosControllerIT.java:72)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.jayway.jsonpath.PathNotFoundException: No results for path: $['message']
+

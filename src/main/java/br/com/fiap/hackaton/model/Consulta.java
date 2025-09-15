@@ -41,9 +41,9 @@ public class Consulta {
     @Enumerated(EnumType.STRING)
     private ConsultaStatus status;
 
-    private OffsetDateTime expiresAt; // TTL da proposta
+    private OffsetDateTime expiresAt;
 
     private String sintomas;
 
-    private String prioridade; // Alta/Media/Baixa (string simples no MVP)
+    private String prioridade;
 }

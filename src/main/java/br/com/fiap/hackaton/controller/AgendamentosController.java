@@ -1,6 +1,7 @@
 package br.com.fiap.hackaton.controller;
 
 import br.com.fiap.hackaton.dto.*;
+import br.com.fiap.hackaton.exceptions.ApiErrorResponse;
 import br.com.fiap.hackaton.exceptions.NoSuggestionException;
 import br.com.fiap.hackaton.service.AgendamentoService;
 import br.com.fiap.hackaton.service.SugestaoService;
@@ -42,7 +43,6 @@ public class AgendamentosController {
         return ResponseEntity.ok(dto);
     }
 
-    // === Error handlers padronizados ===
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ErrorResponse> handleValidation(MethodArgumentNotValidException ex) {
         var msg = ex.getBindingResult().getFieldErrors().stream()

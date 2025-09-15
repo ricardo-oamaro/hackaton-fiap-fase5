@@ -1,12 +1,12 @@
 package br.com.fiap.hackaton.service;
 
-import br.com.fiap.hackaton.record.RankedSlot;
 import br.com.fiap.hackaton.dto.SugestaoRequestDto;
 import br.com.fiap.hackaton.dto.SugestaoResponseDto;
 import br.com.fiap.hackaton.enums.ConsultaStatus;
 import br.com.fiap.hackaton.enums.Especialidade;
 import br.com.fiap.hackaton.exceptions.NoSuggestionException;
 import br.com.fiap.hackaton.model.Consulta;
+import br.com.fiap.hackaton.record.RankedSlot;
 import br.com.fiap.hackaton.repository.ConsultaRepository;
 import br.com.fiap.hackaton.repository.PacienteRepository;
 import br.com.fiap.hackaton.repository.SlotAgendaRepository;
