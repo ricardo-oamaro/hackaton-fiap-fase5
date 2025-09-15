@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "ae6b2d65-a4d8-4567-901c-5e8de2e440dd",
+		"name": "FASE 5 - História 2 (Exames) - Vinicius",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16814452",
+		"_collection_link": "https://api555-6503.postman.co/workspace/FASE5~f309eb90-7adb-4a90-af07-197fb6a15ed6/collection/16814452-ae6b2d65-a4d8-4567-901c-5e8de2e440dd?action=share&source=collection_link&creator=16814452"
+	},
+	"item": [
+		{
+			"name": "Criar Tipo de Exame (Hemograma)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"codigo\": \"CARDIO3\",\n    \"descricao\": \"cardio Completo\",\n    \"urgentePorPadrao\": false,\n    \"duracaoMinutos\": 30,\n    \"observacoes\": \"Exame de sangue básico\",\n    \"palavrasChaveAlta\": \"pré-operatório,cirurgia,urgente,emergência\",\n    \"palavrasChaveMedia\": \"acompanhamento,controle,rotina médica\",\n    \"prazoDiasAlta\": 30,\n    \"prazoDiasMedia\": 7,\n    \"prazoDiasBaixa\": 15\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/tipos-exame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tipos-exame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Tipo de Exame (Raio-X)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"codigo\": \"RAIO_TORAX\",\n    \"descricao\": \"Raio-X de Tórax\",\n    \"urgentePorPadrao\": true,\n    \"duracaoMinutos\": 45,\n    \"observacoes\": \"Exame de imagem para diagnóstico\",\n    \"palavrasChaveAlta\": \"fratura,trauma,urgente\",\n    \"palavrasChaveMedia\": \"dor,infecção\",\n    \"prazoDiasAlta\": 1,\n    \"prazoDiasMedia\": 3,\n    \"prazoDiasBaixa\": 7\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/tipos-exame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tipos-exame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agendar Exame - Caso Urgente (Prioridade Alta)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pacienteId\": 1,\n    \"tipoExame\": \"HEMOGRAMA\",\n    \"observacoes\": \"Exame pré-operatório para cirurgia cardíaca\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333,\n    \"raioKm\": 100,\n    \"urgente\": true,\n    \"justificativaUrgencia\": \"Cirurgia marcada para próxima semana\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/exames/agendar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exames",
+						"agendar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agendar Exame - Caso Normal (Prioridade Baixa)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pacienteId\": 2,\n    \"tipoExame\": \"HEMOGRAMA\",\n    \"observacoes\": \"Exame de rotina para check-up anual\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333,\n    \"raioKm\": 10,\n    \"urgente\": false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/exames/agendar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exames",
+						"agendar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Tipos de Exame Ativos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tipos-exame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tipos-exame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agendar Exame - Prioridade Média por Palavra-Chave",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pacienteId\": 3,\n    \"tipoExame\": \"HEMOGRAMA\",\n    \"observacoes\": \"Exame de acompanhamento para controle de anemia\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333,\n    \"raioKm\": 20,\n    \"urgente\": false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/exames/agendar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exames",
+						"agendar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agendar Raio-X com Alta Prioridade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pacienteId\": 3,\n    \"tipoExame\": \"RAIO_X\",\n    \"observacoes\": \"Suspeita de fratura após queda\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333,\n    \"raioKm\": 25,\n    \"urgente\": true,\n    \"justificativaUrgencia\": \"Paciente com dor intensa e incapacitante\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/exames/agendar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exames",
+						"agendar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Exames Disponíveis",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pacienteId\": 1,\n    \"tipoExame\": \"HEMOGRAMA\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333,\n    \"raioKm\": 15,\n    \"quantidadeMaxima\": 5,\n    \"janelaDias\": 15\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/exames/disponiveis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exames",
+						"disponiveis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmar Exame Agendado",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/exames/1/confirmar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"exames",
+						"1",
+						"confirmar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
