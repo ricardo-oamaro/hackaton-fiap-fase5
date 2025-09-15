@@ -25,4 +25,31 @@ public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
          or (c.status = 'PROPOSTA' and c.expiresAt > CURRENT_TIMESTAMP)
     """)
     List<Long> findSlotsOcupados();
+
+    @Query("""
+        select c from Consulta c
+        where c.paciente.id = :pacienteId
+          and c.status = 'AGENDADA'
+          and c.inicio >= CURRENT_TIMESTAMP
+        order by c.inicio
+    """)
+    List<Consulta> findAtivosByPaciente(@Param("pacienteId") Long pacienteId);
+
+    @Query("""
+        select c from Consulta c
+        where c.paciente.id = :pacienteId
+        order by c.inicio desc
+    """)
+    List<Consulta> findHistoricoByPaciente(@Param("pacienteId") Long pacienteId);
+
+    @Query("""
+        select c from Consulta c
+        where c.paciente.id = :pacienteId
+          and (:status is null or c.status = :status)
+        order by c.inicio desc
+    """)
+    List<Consulta> findByPacienteAndStatus(
+            @Param("pacienteId") Long pacienteId,
+            @Param("status") ConsultaStatus status
+    );
 }
